@@ -4310,9 +4310,9 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 
 	.thing .title {
 		&.loggedin.click, &.click, &.loggedin {
-			color: $color_wineRed;
+			color: $color_white;
 		}
-		color: $color_wineRed;
+		color: $color_white;
 	}
 
 	body .content .sitetable .link .title a:hover {
