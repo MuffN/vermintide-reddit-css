@@ -1414,7 +1414,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			width: 100%;
 			left: 0px;
 			right: 0px;
-			background: $color_contentBg url(%%bg-dot%%) no-repeat 50% 0%;
+			background: none;
 			content: "";
 			text-indent: -9999px;
 			z-index: -1;
@@ -4224,7 +4224,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 	.content {
 		&:before {
 			height: 414px;
-			background: $color_contentBeforeBG url(%%bg-dot%%) fixed no-repeat 33% 0;
+			background: none;
 		}
 		margin-top: 342px;
 	}
