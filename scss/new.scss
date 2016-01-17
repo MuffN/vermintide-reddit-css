@@ -502,7 +502,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		background-origin: padding-box;
 		height: 260px;
 		margin: 0px 0px -260px;
-		background-size:cover;
+		background-size: cover;
 	}
 
 	#sr-header-area {
@@ -517,7 +517,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 	}
 
 	#header-bottom-right {
-		position:absolute;
+		position: absolute;
 	}
 
 	body:not(.loggedin) #sr-header-area .width-clip {
@@ -639,7 +639,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			transition: background-color 0.25s ease;
 			&:hover {
 				text-decoration: none;
-				background-color: $color_dropdownBorder$color_pagenameBGHover;
+				background-color: $color_dropdownBorder $color_pagenameBGHover;
 			}
 			&:before {
 				content: "/r/";
@@ -670,8 +670,8 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			text-transform: uppercase;
 			font-weight: normal;
 			font-size: 14px;
-			font-family: Arial,sans-serif;
-			transition: color 0.25s ease,background-color 0.25s ease;
+			font-family: Arial, sans-serif;
+			transition: color 0.25s ease, background-color 0.25s ease;
 			color: $color_white;
 			text-shadow: 0px 1px 8px $color_textShadow;
 		}
@@ -684,7 +684,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 	#header .tabmenu li {
 		a:hover {
 			color: $color_white;
-			background-color: $color_dropdownBorder$color_pagenameBGHover;
+			background-color: $color_dropdownBorder $color_pagenameBGHover;
 		}
 		&.selected a {
 			padding: 16px 16px 14px 16px;
@@ -694,7 +694,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			color: $color_white;
 			font-weight: bold;
 			&:hover {
-				background-color: $color_dropdownBorder$color_pagenameBGHover;
+				background-color: $color_dropdownBorder $color_pagenameBGHover;
 			}
 		}
 	}
@@ -789,11 +789,11 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			content: "You have new messages!";
 			text-indent: 0px;
 			font-size: 14px;
-			font-family: arial,sans-serif;
+			font-family: arial, sans-serif;
 			line-height: 1;
 			-webkit-transform: translateY(112px);
 			transform: translateY(112px);
-			transition: background-color 0.25s ease,box-shadow 0.25s ease;
+			transition: background-color 0.25s ease, box-shadow 0.25s ease;
 			background: $color_haveMailBG url(%%sprite-alternate%%) no-repeat 269px -32px;
 		}
 		&:hover:before {
@@ -849,7 +849,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		content: "CSS Theme via /r/Naut";
 		text-transform: none;
 		font-size: 16px;
-		font-family: arial,sans-serif;
+		font-family: arial, sans-serif;
 		position: absolute;
 		width: 300px;
 		text-align: center;
@@ -954,17 +954,17 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			a {
 				color: $color_wineRed !important;
 			}
-			a>mark {
+			a > mark {
 				color: $color_wineRed !important;
 			}
 
 			.search-expando.collapsed:before {
 				background: $color_transp;
-				background: -moz-linear-gradient(top,$color_transp 0%,$color_searchExpandoCollapsed 100%);
-				background: -webkit-linear-gradient(top,$color_transp 0%,$color_searchExpandoCollapsed 100%);
-				background: -o-linear-gradient(top,$color_transp 0%,$color_searchExpandoCollapsed 100%);
-				background: -ms-linear-gradient(top,$color_transp 0%,$color_searchExpandoCollapsed 100%);
-				background: linear-gradient(to bottom,$color_searchExpandoCollapsedBefore 0%,$color_searchExpandoCollapsed 100%);
+				background: -moz-linear-gradient(top, $color_transp 0%, $color_searchExpandoCollapsed 100%);
+				background: -webkit-linear-gradient(top, $color_transp 0%, $color_searchExpandoCollapsed 100%);
+				background: -o-linear-gradient(top, $color_transp 0%, $color_searchExpandoCollapsed 100%);
+				background: -ms-linear-gradient(top, $color_transp 0%, $color_searchExpandoCollapsed 100%);
+				background: linear-gradient(to bottom, $color_searchExpandoCollapsedBefore 0%, $color_searchExpandoCollapsed 100%);
 			}
 			.search-expando-button {
 				color: $color_wineRed;
@@ -1000,7 +1000,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		text-align: left;
 		padding: 0px 16px;
 		transition: all 0.25s ease;
-		font-family: verdana,arial,sans-serif;
+		font-family: verdana, arial, sans-serif;
 		&:hover {
 			background-color: $color_fancyToggleButtonBGHover;
 			box-shadow: 0px 5px 8px $color_buttonBoxShadowHover;
@@ -1170,7 +1170,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			background: $color_fancyToggleButtonBG url(%%sprite-alternate%%);
 			border: 0px solid;
 			box-shadow: 0px 2px 4px $color_mailBoxshadow;
-			transition: all 0.25s ease,background-position 0.25s ease,background-color 0.5s ease;
+			transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
 			outline: none !important;
 		}
 	}
@@ -1186,7 +1186,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		border: 0px solid;
 		box-shadow: 0px 2px 4px $color_mailBoxshadow;
 		background: $color_fancyToggleButtonBG url(%%sprite-alternate%%);
-		transition: all 0.25s ease,background-position 0.25s ease,background-color 0.5s ease;
+		transition: all 0.25s ease, background-position 0.25s ease, background-color 0.5s ease;
 		outline: none !important;
 	}
 
@@ -1280,7 +1280,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			.-blocks, .-lists, pre, blockquote, table, p, ul, ol {
 				color: $color_white;
 				font-size: 13px;
-				font-family: Arial,sans-serif;
+				font-family: Arial, sans-serif;
 				line-height: 1.3333333333333333em;
 			}
 		}
@@ -1297,7 +1297,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 				width: 100%;
 				border-radius: 2px;
 				background-color: $color_buttonBG;
-				font-family: verdana,arial,sans-serif;
+				font-family: verdana, arial, sans-serif;
 				transition: all 0.25s ease;
 				color: $color_white;
 				box-shadow: 0px 1px 5px $color_mailBoxshadow;
@@ -1577,7 +1577,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		font-style: normal;
 		font-variant: normal;
 		font-size: 13px;
-		font-family: Arial,sans-serif;
+		font-family: Arial, sans-serif;
 		cursor: default;
 		vertical-align: middle;
 		position: relative;
@@ -1706,7 +1706,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		}
 	}
 
-	.linkflair-update .linkflairlabel{
+	.linkflair-update .linkflairlabel {
 		background-color: $color_linkFlairLabelUpdate !important;
 		a {
 			//color: $color_linkFlairLabelUpdate !important;
@@ -1716,7 +1716,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 	.link .title {
 		margin: -2px 0px 0px 0px;
 		font-size: 18px;
-		font-family: Arial,sans-serif;
+		font-family: Arial, sans-serif;
 		overflow: visible;
 		transition: all 0.15s ease;
 	}
@@ -1880,7 +1880,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		margin-top: 4px;
 		color: $color_linkDomain;
 		font-size: 12px;
-		font-family: arial,sans-serif;
+		font-family: arial, sans-serif;
 		transition: all 0.15s ease;
 		line-height: 20px;
 	}
@@ -1946,7 +1946,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		color: $color_linkDomain;
 		font-weight: normal;
 		font-size: 13px;
-		font-family: Arial,sans-serif;
+		font-family: Arial, sans-serif;
 		transition: all 0.15s ease;
 	}
 
@@ -2025,7 +2025,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			color: $color_linkDomain;
 			font-weight: normal;
 			font-size: 13px;
-			font-family: Calibri,Candara,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+			font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 			transition: all 0.15s ease;
 		}
 	}
@@ -2348,7 +2348,8 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		&.RES-keyNav-activeElement {
 			background-color: transparent !important;
 			padding-left: 8px !important;
-			border-left: 2px solid $color_inputBorderActive;
+			border-left: 2px solid $color_wineRed;
+			border-radius : 5px;
 		}
 		&.commentarea div.RES-keyNav-activeElement {
 			&.entry div.noncollapsed {
@@ -2360,6 +2361,12 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 				background-color: transparent !important;
 			}
 		}
+	}
+
+	.RES-keyNav-activeElement, .RES-keyNav-activeElement .usertext-body.md-container {
+		background-color: transparent !important;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 
 	.res .commentarea {
@@ -2807,8 +2814,32 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		}
 	}
 
-	.usertext-edit .RESDialogSmall .md.RESDialogContents {
-		background-color: $color_RESDialogSmallLivePreview;
+	.usertext-edit .RESDialogSmall {
+		box-shadow: 0px 2px 3px $color_boxshadow;
+
+		.md.RESDialogContents {
+			//background-color: $color_RESDialogSmallLivePreview;
+			color: $color_white;
+		}
+
+		&.livePreview {
+			border-color: $color_black;
+
+			.gearIcon {
+				background: none !important;
+			}
+		}
+	}
+
+	.usertext-edit .RESDialogSmall > h3 {
+		background-color: $color_darkGray;
+		border-bottom: 1px solid $color_boxshadow;
+		color: $color_white !important;
+	}
+
+	.RESSubscriptionButton {
+		color: $color_wineRed !important;
+		background : none !important;
 	}
 
 	.comment {
