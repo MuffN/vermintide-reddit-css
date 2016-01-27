@@ -3619,19 +3619,20 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			border: none;
 			padding: 16px;
 			margin: 16px 316px 16px 0px;
-			color: $color_linkDomain;
-			background-color: $color_white;
+			color: $color_white;
+			background-color: $color_black;
 			height: inherit;
 			h2 {
-				color: $color_inputFontActive;
+				color: $color_wineRed;
 			}
 		}
 		.NERPageMarker {
 			border-radius: 0px;
 			border: none;
-			background-color: $color_white;
 			padding: 16px 0px;
 			margin: 0px;
+			background-color: $color_black;
+			color: $color_wineRed;
 		}
 		.sitetable .sitetable {
 			margin-right: 0px;
