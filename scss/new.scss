@@ -1150,7 +1150,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			}
 		}
 		form.toggle {
-			display: none;
+			background: inherit;
 		}
 	}
 
@@ -1928,7 +1928,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 
 	.RESUserTagImage {
 		height: 10px !important;
-		background: url(%%sprite-alternate%%) (-192px) -34px !important;
+		//background: url(%%sprite-alternate%%) (-192px) -34px !important;
 		opacity: 0.25 !important;
 		margin-left: 2px !important;
 		transition: opacity 0.15s ease;
@@ -3240,6 +3240,20 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			em {
 				color: $color_linkDomain;
 			}
+
+			.wikirevisionlisting {
+				overflow: scroll;
+				margin-right: 0;
+				.flair {
+					display: none !important;
+				}
+				a.voteWeight {
+					background: inherit !important;
+				}
+				table.generic-table {
+					color: $color-white !important;
+				}
+			}
 		}
 	}
 
@@ -3326,7 +3340,14 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			margin-bottom: 16px;
 			.sheets {
 				margin-right: 0;
+				&:before {
+					content: 'Please use and contribute to this repository instead of editing the css here: https://github.com/Eruyome/vermintide-reddit-css/';
+				}
+				.col {
+					padding-top : 10px;
+				}
 			}
+
 		}
 		h2 {
 			display: none;
@@ -3335,6 +3356,13 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		#image-preview-list {
 			overflow:auto;
 			width: 100%;
+		}
+
+		ul.image-preview-list .description pre.img-url {
+			color: $color_white;
+		}
+		.img-url {
+			color: $color_white;
 		}
 		#images{
 			height:auto;
@@ -3671,10 +3699,11 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		}
 		.titlebox {
 			.tagline {
-				margin-top: -14px;
+				//margin-top: -14px;
+				margin-top: 0;
 			}
 			span.subscribers, .users-online, .number {
-				top: -32px;
+				top: -36px;
 			}
 		}
 		.commentarea .panestack-title {
@@ -4787,6 +4816,9 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 	.sidecontentbox {
 		.title h1, .more a {
 			color: $color_titleBoxVisitedFont;
+		}
+		a.voteWeight {
+			background: inherit !important;
 		}
 	}
 
