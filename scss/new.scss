@@ -129,6 +129,7 @@ $color_linkFlairLabelIssue : #F45000;
 $color_linkFlairLabelSolved : #606060;
 $color_linkFlairLabelUpdate : #804615;
 $color_linkFlairLabelGameplay : #236467;
+$color_linkFlairLabelDaily : #07610d;
 
 //----------------------- yet unused test variables for color themes --------------------
 
@@ -1711,6 +1712,13 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		background-color: $color_linkFlairLabelUpdate !important;
 		a {
 			//color: $color_linkFlairLabelUpdate !important;
+		}
+	}
+
+	.linkflair-daily .linkflairlabel {
+		background-color: $color_linkFlairLabelDaily !important;
+		a {
+			//color: $color_linkFlairLabelDaily !important;
 		}
 	}
 
@@ -4975,7 +4983,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 
 
 	.side .md>ul:nth-of-type(1):hover {
-		height: 325px;
+		height: 345px;
 	}
 
 	.side .md>ul:nth-of-type(1) {
@@ -5049,6 +5057,11 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		min-width: 165px;
 	}
 
+	.side .md [href*="search?q=flair%3Adaily"], .side .md [href*="search?q=flair%3Aweekly"]{
+		background:$color_linkFlairLabelDaily;
+		color:$color_white;
+	}
+
 	.side .md [href*="search?q=flair%3Afluff"]{
 		background:$color_linkFlairLabelFluff;
 		color:$color_white;
@@ -5090,7 +5103,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		color:$color_white;
 	}
 	.side .md [href*="search?q=flair%3Aannouncement"]{
-		background:#004304;
+		background:$color_linkFlairLabelMod;
 		color:$color_white;
 	}
 
