@@ -1497,19 +1497,23 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			height: 20px;
 			background-position: -128px 0px;
 			position: relative;
+			&:after {
+				opacity: 0;
+				position: absolute;
+				top: 0;
+			}
 			&:focus:after {
 				position: absolute;
-				left: 2px;
+				left: 9px;
 				bottom: -3px;
-				width: 28px;
-				height: 28px;
-				opacity: 1;
+				width: 15px;
+				height: 14px;
 				z-index: 100;
 				content: " ";
-				background-color: $color_arrowUpmodFocus;
 				border-radius: 28px;
-				animation: upvote 0.35s ease-out forwards;
-				-webkit-animation: upvote 0.35s ease-out forwards;
+				background: url(%%orange-shard-icon%%);
+				animation: upvote 1s linear;
+				-webkit-animation: upvote 1s linear;
 			}
 		}
 		&.down {
@@ -1520,6 +1524,25 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		&.downmod {
 			height: 20px;
 			background-position: -224px 0px;
+			position: relative;
+			&:after {
+				opacity: 0;
+				position: absolute;
+				bottom: 0;
+			}
+			&:focus:after {
+				position: absolute;
+				left: 9px;
+				bottom: -3px;
+				width: 15px;
+				height: 14px;
+				z-index: 100;
+				content: " ";
+				border-radius: 28px;
+				background: url(%%blue-shard-icon%%);
+				animation: downvote 1s linear;
+				-webkit-animation: downvote 1s linear;
+			}
 		}
 		&.down {
 			&:after {
@@ -4201,91 +4224,41 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 
 	@-webkit-keyframes upvote {
 		0% {
-			transform: scale(0, 0);
-			-webkit-transform: scale(0, 0);
-			opacity: 1;
+			top: 0; 
+			opacity: 1; 
 		}
-
-		45% {
-			opacity: 1;
-		}
-
-		98% {
-			opacity: 0;
-		}
-
 		100% {
-			transform: scale(1.5, 1.5);
-			-webkit-transform: scale(1.5, 1.5);
-			opacity: 0;
+			top: -30px; 
+			opacity: 0; 
 		}
 	}
-
-
-	@-moz-keyframes upvote {
-		0% {
-			transform: scale(0, 0);
-			-webkit-transform: scale(0, 0);
-			opacity: 1;
-		}
-
-		45% {
-			opacity: 1;
-		}
-
-		98% {
-			opacity: 0;
-		}
-
-		100% {
-			transform: scale(1.5, 1.5);
-			-webkit-transform: scale(1.5, 1.5);
-			opacity: 0;
-		}
-	}
-
-
-	@-o-keyframes upvote {
-		0% {
-			transform: scale(0, 0);
-			-webkit-transform: scale(0, 0);
-			opacity: 1;
-		}
-
-		45% {
-			opacity: 1;
-		}
-
-		98% {
-			opacity: 0;
-		}
-
-		100% {
-			transform: scale(1.5, 1.5);
-			-webkit-transform: scale(1.5, 1.5);
-			opacity: 0;
-		}
-	}
-
-
 	@keyframes upvote {
 		0% {
-			transform: scale(0, 0);
-			-webkit-transform: scale(0, 0);
+			top: 0; 
+			opacity: 1; 
+		}
+		100% {
+			top: -30px; 
+			opacity: 0; 
+		}
+	}
+	@-webkit-keyframes downvote {
+		0% {
+			bottom: 0px;
 			opacity: 1;
 		}
-
-		45% {
-			opacity: 1;
-		}
-
-		98% {
+		100% {
+			bottom: -30px;
 			opacity: 0;
 		}
-
+	}
+	@keyframes downvote {
+		0% {
+			bottom: 0px;
+			opacity: 1;
+		}
 		100% {
-			transform: scale(1.5, 1.5);
-			-webkit-transform: scale(1.5, 1.5);
+			bottom: -30px;
 			opacity: 0;
 		}
 	}
