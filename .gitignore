@@ -1,3 +1,7 @@
 *.project
 *.idea
-.css
+*.css.map
+npm-debug.log*
+/node_modules
+/test
+/css

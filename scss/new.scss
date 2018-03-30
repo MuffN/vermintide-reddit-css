@@ -119,7 +119,7 @@ $color_flairPlatformFontBefore : #ad3429;
 $color_flairPlatform : rgb(104, 110, 123);
 $color_linkFlairLabel : #5FB04D;
 $color_linkFlairLabelMod : #65B354;
-$color_linkFlairLabelSuggestion : #369;
+$color_linkFlairLabelSuggestion : #12487d;
 $color_linkFlairLabelDiscussion : #550200;
 $color_linkFlairLabelStrategy : #B24DFF;
 $color_linkFlairLabelNews : #AA6D39;
@@ -130,6 +130,7 @@ $color_linkFlairLabelSolved : #606060;
 $color_linkFlairLabelUpdate : #804615;
 $color_linkFlairLabelGameplay : #236467;
 $color_linkFlairLabelDaily : #07610d;
+$color_linkFlairLabelConsole : #659bf5;
 
 //----------------------- yet unused test variables for color themes --------------------
 
@@ -701,7 +702,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		}
 	}
 
-	.listing-page .tabmenu li:nth-of-type(3), .wiki-page .tabmenu li:nth-of-type(3), .listing-page .tabmenu li:nth-of-type(4), .wiki-page .tabmenu li:nth-of-type(4), .listing-page .tabmenu li:nth-of-type(6), .wiki-page .tabmenu li:nth-of-type(6), .listing-page .tabmenu li:nth-of-type(9), .wiki-page .tabmenu li:nth-of-type(9) {
+	.listing-page .tabmenu li:nth-of-type(3), .wiki-page .tabmenu li:nth-of-type(3), .listing-page .tabmenu li:nth-of-type(4), .wiki-page .tabmenu li:nth-of-type(4), .listing-page .tabmenu li:nth-of-type(6), .wiki-page .tabmenu li:nth-of-type(6) {
 		display: none;
 	}
 
@@ -1745,6 +1746,13 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		}
 	}
 
+	.linkflair-console .linkflairlabel {
+		background-color: $color_linkFlairLabelConsole !important;
+		a {
+			//color: $color_linkFlairLabelDaily !important;
+		}
+	}
+
 	.link .title {
 		margin: -2px 0px 0px 0px;
 		font-size: 18px;
@@ -2592,7 +2600,6 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			}
 		}
 	}
-
 	.commentarea .infobar {
 		padding: 8px 16px;
 		line-height: 16px;
@@ -2768,6 +2775,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			box-shadow: 0px 1px 5px $color_boxshadow;
 			margin: 0 0 8px 0;
 			padding: 16px 16px 16px 14px;
+
 			&.reported {
 				//background-color: #260E0E;
 			}
@@ -2798,6 +2806,9 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 				margin-bottom: 4px;
 			}
 		}
+		.entry {
+			margin-left: 15px;
+		}
 		.entry .tagline {
 			color: $color_linkDomain;
 			font-size: 12px;
@@ -2807,10 +2818,18 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 			background-color: transparent;
 			transition: all 0.15s ease;
 			color: $color_linkDomain;
+
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			bottom: -1px;
+			padding: 4px;
+			border-radius: 5px 0 0 5px;
+
 			&:hover {
-				color: $color_white;
 				text-decoration: none;
-				background-color: $color_inputBorderActive;
+				background: $color_wineRed;
+				color: $color_white;
 			}
 		}
 		.author {
@@ -4804,7 +4823,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 	}
 
 	.side .titlebox .md {
-		position:relative;
+		//position: relative;
 	}
 
 	.side .titlebox .md h2{
@@ -4956,7 +4975,7 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 
 
 	.side .md>ul:nth-of-type(1):hover {
-		height: 345px;
+		height: 372px;
 	}
 
 	.side .md>ul:nth-of-type(1) {
@@ -5034,12 +5053,10 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		background:$color_linkFlairLabelDaily;
 		color:$color_white;
 	}
-
 	.side .md [href*="search?q=flair%3Afluff"]{
 		background:$color_linkFlairLabelFluff;
 		color:$color_white;
 	}
-
 	.side .md [href*="search?q=flair%3Astrategy"]{
 		background:$color_linkFlairLabelStrategy;
 		color:$color_white;
@@ -5079,9 +5096,85 @@ $color_inv_blockquoteBorder 	: invert($color_blockquoteBorder);
 		background:$color_linkFlairLabelMod;
 		color:$color_white;
 	}
+	.side .md [href*="search?q=flair%3Aconsole"]{
+		background:$color_linkFlairLabelConsole;
+		color:$color_white;
+	}
 
 	.side .titlebox form .md ul li a:visited {
 		color: $color_white !important;
+	}
+
+	// https://www.reddit.com/r/Enhancement/comments/4pj28n/collapse_post_like_in_roverwatch/
+	.commentarea .thing.noncollapsed, .res .commentarea .thing.noncollapsed, html.res-commentBoxes.res-commentBoxes-rounded .comment.noncollapsed {
+		padding: 12px 0 0 24px !important;
+	}
+
+	.commentarea .thing, .res .commentarea .thing, html.res-commentBoxes.res-commentBoxes-rounded .comment {
+		position: relative;
+	}
+
+	.subreddit-rules-page {
+		margin-top: 330px;
+
+		.md {
+			color: $color_white;
+		}
+	}
+
+	// console posts link addon
+	.side .titlebox .md {
+		position: static;
+	}
+	.side .md>p:nth-of-type(1) a {
+		position: absolute;
+		top: 350px;
+		left: 32px;
+		z-index: 1;
+		display: inline;
+		background: transparent;
+		min-width: initial;
+		font-size: 18px;
+		font-weight: normal;
+	}
+
+	.listing-page .sitetable {
+		padding-top: 37px;
+		background-color: $color_darkGray;
+		border-radius: 2px 2px 0px 0px;
+		position: relative;
+		z-index: 0;
+	}
+
+	.content>span {
+		background: $color_black;
+		z-index: 100;
+		position: relative;
+		height: 35px;
+		display: inline-block;
+	}
+
+	.comments-page .link {
+		position: relative;
+		z-index: 1;
+	}
+
+	.stylesheet-customize-container .pretty-form {
+		padding-top: 40px;
+	}
+
+	.menuarea, .subreddit-rules-page, .fancy-settings {
+		background-color: $color_black;
+		z-index: 1;
+		position: relative;
+	}
+
+	.fancy-settings .pretty-form {
+
+	}
+
+	.subreddit-rules-page, .fancy-settings {
+		margin-right: 316px;
 	}
 }
 
