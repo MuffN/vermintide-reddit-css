@@ -1,3 +1,6 @@
 *.project
 *.idea
-.css
+*.css.map
+/node_modules
+/test
+/css
