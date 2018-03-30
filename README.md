@@ -25,3 +25,14 @@ When gulp is initialized it runs these tasks once for all files, after that only
 
 - SCSS files are converted to CSS and a minified CSS file in the folder `./css`, this folder gets ignored by git since we don't have to push it.
 - Images are being compressed and saved to `./img/exported-minified`.
+
+##### Using specific tasks:
+
+While simply using the command **`gulp`** or **`npm start`** handles all basic needs while developing we may want to use specific gulp tasks. To do this either stop the currently running gulp process or use a different console window and use these tasks like this:   
+
+```
+gulp styles:all
+gulp styles:gitmodified
+gulp default
+```
+
